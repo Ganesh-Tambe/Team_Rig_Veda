@@ -52,7 +52,7 @@ public class RediologyAction {
 	
 	
 	public void printdata() {
-	
+	  
 	}
 	
 }
