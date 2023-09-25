@@ -29,7 +29,18 @@ public class OPDPageLocators {
 	@FindBy(xpath="//th[text()=\"OPD Checkup ID\"]")
 	public WebElement showPopUpText;
 	
-	@FindBy()
+	
+	//popup close  
+	@FindBy(xpath="//*[@id=\"viewModal\"]/div/div/div[1]/button")
 	public WebElement clickShowClose;
+	
+	@FindBy(linkText="Lab Investigation")
+	public WebElement Lab_invest;
+	
+	@FindBy(xpath="//input[@aria-controls=\"DataTables_Table_2\"]")
+	public WebElement searchTestName;
+	
+	@FindBy(xpath="//*[@id=\"DataTables_Table_2\"]/tbody/tr[1]/td[7]/a")
+	public WebElement Lab_investshowbtn;
 
 }

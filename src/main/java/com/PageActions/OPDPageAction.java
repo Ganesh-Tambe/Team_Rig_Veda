@@ -32,6 +32,7 @@ public class OPDPageAction {
 		objOPDLocator.clickVisit.click();
 	}
 	
+	
 	public void searchCaseId()
 	{
 		objOPDLocator.SearchUser.sendKeys("4788",Keys.ENTER);
@@ -56,6 +57,7 @@ public class OPDPageAction {
 	
 	public void clickShow()
 	{
+		
 		objOPDLocator.showbtn.click();
 	}
 	
@@ -67,9 +69,27 @@ public class OPDPageAction {
 		return str;
 	}
 	
-//	public void clickPopUpClose()
-//	{
-//		objOPDLocator.clickShowClose.click();
-//	}
+	public void clickPopUpClose()
+	{
+		objOPDLocator.clickShowClose.click();
+	}
+	
+	public void clickLabInv()
+	{
+		objOPDLocator.Lab_invest.click();
+	}
+	
+	
+	public void searchTestName()
+	{
+		objOPDLocator.searchTestName.sendKeys("Chest X-rays",Keys.ENTER);
+	}
+	
+	public void clicklabShow()
+	{
+		objOPDLocator.Lab_investshowbtn.click();
+	}
+	
+	
 
 }
