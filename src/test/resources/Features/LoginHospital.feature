@@ -32,3 +32,16 @@ Given USer Should be on "https://demo.smart-hospital.in/site/userlogin"
     Examples:
       | username            | password      |
       |                     |               |
+      
+  @Logout
+  Scenario Outline: login with valid credentials and Logout
+    When user enters <username> and <password>
+    And User clicks the Sign In button
+    And user clicks on profile
+    And user clicks on logout
+    Then User should be logged out successfully
+    
+ 
+    Examples:
+      | username            | password      |
+      | pat1                | password      |

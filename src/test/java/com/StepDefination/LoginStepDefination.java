@@ -43,6 +43,25 @@ public class LoginStepDefination {
 	    // Write code here that turns the phrase above into concrete actions
 		  Assert.assertEquals(HelperClass.getDriver().getCurrentUrl(), "https://demo.smart-hospital.in/site/userlogin");
 	}
+	
+	@When("user clicks on profile")
+	public void user_clicks_on_profile() {
+	    // Write code here that turns the phrase above into concrete actions
+	    objLoginAction.clickProfile();
+	}
+
+	@When("user clicks on logout")
+	public void user_clicks_on_logout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    objLoginAction.clickLogout();
+	}
+	
+	@Then("User should be logged out successfully")
+	public void user_should_be_logged_out_successfully() {
+	    // Write code here that turns the phrase above into concrete actions
+	    Assert.assertEquals(HelperClass.getDriver().getCurrentUrl(), "https://demo.smart-hospital.in/site/userlogin");
+	}
+
 
 
 }

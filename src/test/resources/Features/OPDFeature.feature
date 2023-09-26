@@ -12,9 +12,7 @@ Background:
    And Print all the search Results
    And user click on show button
    And Assert the user is on popup box
-   Then close Show PopUp
-  
-   
+   Then close Show PopUp 
    
  @Lab-Investigation
  Scenario: User Perform the OPD functionality With Lab_investigation section
@@ -22,3 +20,6 @@ Background:
    And user search the test_name ;
    And user click on lab_show button
    And Assert the user is on popup box
+     
+ 
+   
