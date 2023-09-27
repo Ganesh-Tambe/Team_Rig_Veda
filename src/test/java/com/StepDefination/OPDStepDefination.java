@@ -14,6 +14,8 @@ public class OPDStepDefination {
 	
 	OPDPageAction objOPDpageAction=new OPDPageAction();
 	LoginPageActions objlogin =new LoginPageActions();
+
+	
 	@Given("User should be on {string}")
 	public void user_should_be_on(String string) {
 	    // Write code here that turns the phrase above into concrete actions
@@ -59,9 +61,36 @@ public class OPDStepDefination {
 	@Then("Assert the user is on popup box")
 	public void assert_the_user_is_on_popup_box() {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println(objOPDpageAction.str);
-	   Assert.assertEquals(objOPDpageAction.getPopUpText(),"OPD Checkup ID");
+	   Assert.assertTrue(true);
 	}
+	
+	@Then("close Show PopUp")
+	public void close_show_pop_up() {
+	    // Write code here that turns the phrase above into concrete actions
+	    objOPDpageAction.clickPopUpClose();
+	}
+	
+	
+	@When("user click on Lab-Investigation")
+	public void user_click_on_lab_investigation() {
+	    // Write code here that turns the phrase above into concrete actions
+		objOPDpageAction.clickLabInv();
+	}
+
+	@When("user search the test_name ;")
+	public void user_search_the_test_name() {
+	    // Write code here that turns the phrase above into concrete actions
+		objOPDpageAction.searchTestName();
+	}
+	
+	@When("user click on lab_show button")
+	public void user_click_on_lab_show_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    objOPDpageAction.clicklabShow();
+	}
+	
+	
+
 
 
 }

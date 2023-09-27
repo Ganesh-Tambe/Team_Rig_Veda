@@ -48,6 +48,20 @@ public class LoginPageActions {
 					objLogin.clickSignIn.click();
 				}
 				
+				//click profile
+				public void clickProfile()
+				{
+					objLogin.clickProfile.click();
+				}
+				
+				//click on logout
+				public void clickLogout()
+				{
+					objLogin.clickLogOut.click();
+				}
+				
+				
+				
 				
 				
 	
