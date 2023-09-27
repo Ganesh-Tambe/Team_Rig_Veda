@@ -14,7 +14,7 @@ public class OPDStepDefination {
 	
 	OPDPageAction objOPDpageAction=new OPDPageAction();
 	LoginPageActions objlogin =new LoginPageActions();
-	String newTab=HelperClass.driver.getWindowHandle();
+
 	
 	@Given("User should be on {string}")
 	public void user_should_be_on(String string) {
