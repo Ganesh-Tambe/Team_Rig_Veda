@@ -13,7 +13,7 @@ public class AmbulancePageLocators {
 	@FindBy(xpath="//input[@aria-controls='DataTables_Table_0']")
 	public WebElement search;
 	
-	@FindBy(xpath="//*[@onclick=\"payModal('62','95.00')\"]")
+	@FindBy(xpath="//*[@onclick=\"payModal('70','95.00')\"]")
 	public WebElement clickpay;
 	
 	@FindBy(xpath="//button[@id=\"pay_button\"]")
