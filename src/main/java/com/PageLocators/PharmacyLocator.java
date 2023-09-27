@@ -17,6 +17,9 @@ public class PharmacyLocator {
 	@FindBy(id = "pay_button")
 	public WebElement addbtn;
 	
+	@FindBy(className  ="box-title")
+	public WebElement title;
+	
 	
 	
 	

@@ -1,16 +1,16 @@
 package com.PageActions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-
 import com.PageLocators.RedioLogyLocator;
+
 import com.utilies.HelperClass;
+
+
 
 public class RediologyAction {
 	RedioLogyLocator rlocator;
@@ -26,33 +26,64 @@ public class RediologyAction {
 	
 	public void fetchdata()
 	{
-//		// Now get all the TR elements from the table
+		// Now get all the TR elements from the table
 
 		List<WebElement> allRows = rlocator.table.findElements(By.tagName("tr"));
-		HashMap<Integer, List<WebElement>> h = new HashMap<Integer, List<WebElement>>();
-// And iterate over them, getting the cells
+		//HashMap<Integer, List<WebElement>> h = new HashMap<Integer, List<WebElement>>();
+        // And iterate over them, getting the cells
 
-		int i=0;
-		for (WebElement row : allRows) {
+//		int i=0;
+//		for (WebElement row : allRows) {
+//
+//			List<WebElement> cells = row.findElements(By.tagName("td"));
+//
+//			//h.put(i++,cells);
+//			for (WebElement cell : cells) {
+//
+//				System.out.println("content >>   " + cell.getText());
+//
+//			}
+//
+//			System.out.println("\n");
+//		}
+		
+		
 
-			List<WebElement> cells = row.findElements(By.tagName("td"));
+		for (int i = 0; i < allRows.size(); i++) {
+		    WebElement row = allRows.get(i);
+		    List<WebElement> cells = row.findElements(By.tagName("td"));
 
-			h.put(i++,cells);
-			for (WebElement cell : cells) {
+		    for (int j = 0; j < cells.size(); j++) {
+		        WebElement cell = cells.get(j);
+		        System.out.println("Row " + i + ", Column " + j + " content >>   " + cell.getText());
+		    }
 
-				System.out.println("content >>   " + cell.getText());
-
-			}
-
-			System.out.println("\n");
-
+		    System.out.println("\n");
 		}
 
 	}
 	
 	
-	public void printdata() {
-	  
+	public String  getamount() {
+		return null;
+		
 	}
+
+	public void searchbill(String name) {
+		// TODO Auto-generated method stub
+		rlocator.search.sendKeys(name);
+	}
+	
+	public void clickview() {
+		rlocator.view.click();
+	}
+	
+	public String getBillno() {
+		String name =rlocator.viewbillnotxt.getText();
+	    return name ;
+	}
+	
+	
+	
 	
 }
