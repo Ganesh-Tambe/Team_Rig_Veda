@@ -5,7 +5,7 @@ Background:
   When users click on Sign In
   And Click on myappointments
   
-@Priority 
+ @AddAppointment
 Scenario: User should Be on the webpage
 And Click on AddAppointment
 And click on Date
@@ -18,7 +18,7 @@ And click on Message
 And click on Available slot
 Then click on Save
 
-@Priority
+@VisibleAppointment
 Scenario: User should Be on the webPage 
 And Click on Search
 And Click on Show

@@ -45,7 +45,7 @@ Scenario: IPD USER Perform the IPD functionality With Payments section
    
    
    
-@Payments
+@Operations
 Scenario: IPD USER Perform the IPD functionality With Payments section  
    
    And IPD USER click on Operations
