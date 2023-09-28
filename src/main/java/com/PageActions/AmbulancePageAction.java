@@ -50,7 +50,7 @@ public class AmbulancePageAction {
 	
 	public void searchBill()
 	{
-		objAmbulanc.search.sendKeys("Arun");
+		objAmbulanc.search.sendKeys("jhon");
 	}
 	
 	public void clickPay()

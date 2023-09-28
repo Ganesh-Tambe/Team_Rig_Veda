@@ -63,7 +63,8 @@ public class OPDPageAction {
 	
 	public String getPopUpText()
 	{
-		return objOPDLocator.showPopUpText.getText();
+	   WebElement txt=HelperClass.wait.until(ExpectedConditions.visibilityOf(objOPDLocator.showPopUpText));
+		return txt.getText();
 	}
 	
 	public void clickPopUpClose()

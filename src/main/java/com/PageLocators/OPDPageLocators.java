@@ -34,7 +34,7 @@ public class OPDPageLocators {
 	public WebElement showbtn;
 	
 	//text from popup
-	@FindBy(xpath="//h4[@class=\"modal-title\" and text()=\"My Details\"]")
+	@FindBy(xpath="//h4[@class='modal-title' and text()='My Details']")
 	public WebElement showPopUpText;
 	
 	
