@@ -16,4 +16,5 @@ Scenario:
 And then visitor should search for bill no "RADIOB107"
 And then click on view
 And assert the text
+Then click on close
 
