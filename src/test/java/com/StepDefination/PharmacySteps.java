@@ -2,6 +2,8 @@ package com.StepDefination;
 
 import java.time.Duration;
 
+import org.testng.Assert;
+
 import com.PageActions.LoginPageActions;
 import com.PageActions.PharmacyAction;
 import com.utilies.HelperClass;
@@ -38,7 +40,7 @@ public void visitor_click_on_pharmacy() {
 @And("visitor search The bill no")
 public void visitor_search_the_bill_no() {
     // Write code here that turns the phrase above into concrete actions
-   objpharmacy.search();
+   objpharmacy.register();
 }
 
 @And("visitor click on pay")
@@ -59,8 +61,10 @@ public void assertion_for_checking_webpage() {
 	//WebElement element = driver.findElement(By.className("box-title"));
     // Get the text from the element
     //String elementText = element.getText();
-	
-	
+	String expected = "Payment Details";
+	String actual =objpharmacy.asserttext();	
+	System.out.println(actual+" this is actuaal");
+	Assert.assertEquals(expected, actual,"this is correct payment ");
 }
 
 

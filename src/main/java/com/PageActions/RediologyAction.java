@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.PageLocators.RedioLogyLocator;
-
 import com.utilies.HelperClass;
 
 
@@ -29,9 +28,6 @@ public class RediologyAction {
 		// Now get all the TR elements from the table
 
 		List<WebElement> allRows = rlocator.table.findElements(By.tagName("tr"));
-		//HashMap<Integer, List<WebElement>> h = new HashMap<Integer, List<WebElement>>();
-        // And iterate over them, getting the cells
-
 //		int i=0;
 //		for (WebElement row : allRows) {
 //
@@ -45,9 +41,7 @@ public class RediologyAction {
 //			}
 //
 //			System.out.println("\n");
-//		}
-		
-		
+//		}	
 
 		for (int i = 0; i < allRows.size(); i++) {
 		    WebElement row = allRows.get(i);
@@ -64,26 +58,29 @@ public class RediologyAction {
 	}
 	
 	
-	public String  getamount() {
-		return null;
-		
-	}
-
 	public void searchbill(String name) {
 		// TODO Auto-generated method stub
 		rlocator.search.sendKeys(name);
 	}
 	
+	
+	
+	
+	////////////////////////////////////
 	public void clickview() {
 		rlocator.view.click();
+		
 	}
 	
 	public String getBillno() {
-		String name =rlocator.viewbillnotxt.getText();
-	    return name ;
+		
+		String name =rlocator.billnotxt.getText();
+		return name;
 	}
 	
-	
+	public void  closetab() {
+		rlocator.closetab.click();
+	}
 	
 	
 }
