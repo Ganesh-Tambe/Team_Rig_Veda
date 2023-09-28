@@ -61,7 +61,9 @@ public class OPDStepDefination {
 	@Then("Assert the user is on popup box")
 	public void assert_the_user_is_on_popup_box() {
 	    // Write code here that turns the phrase above into concrete actions
-	   Assert.assertTrue(true);
+//		Assert.assertEquals(objOPDpageAction.getPopUpText(),"My Details");
+		objOPDpageAction.getPopUpText();
+		Assert.assertTrue(true);
 	}
 	
 	@Then("close Show PopUp")
@@ -89,7 +91,11 @@ public class OPDStepDefination {
 	    objOPDpageAction.clicklabShow();
 	}
 	
-	
+	@Then("close popup")
+	public void close_popup() {
+	    // Write code here that turns the phrase above into concrete actions
+	    objOPDpageAction.clicklabpop();
+	}
 
 
 

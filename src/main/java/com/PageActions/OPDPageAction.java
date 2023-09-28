@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.PageLocators.OPDPageLocators;
 import com.utilies.HelperClass;
@@ -14,7 +15,7 @@ import com.utilies.HelperClass;
 public class OPDPageAction {
 	
 	OPDPageLocators objOPDLocator;
-	public static String str;
+	public String str;
 	
 	public OPDPageAction()
 	{
@@ -63,15 +64,13 @@ public class OPDPageAction {
 	
 	public String getPopUpText()
 	{
-		str=objOPDLocator.showPopUpText.getText();
-//		String s=Arrays.toString(str);
-//		System.out.println(str);
-		return str;
+		return objOPDLocator.showPopUpText.getText();
 	}
 	
 	public void clickPopUpClose()
 	{
-		objOPDLocator.clickShowClose.click();
+		WebElement closepopup=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(objOPDLocator.clickShowClose));
+		closepopup.click();
 	}
 	
 	public void clickLabInv()
@@ -90,6 +89,11 @@ public class OPDPageAction {
 		objOPDLocator.Lab_investshowbtn.click();
 	}
 	
+	public void clicklabpop()
+	{
+		WebElement closelabpopup=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(objOPDLocator.closLabPop));
+		closelabpopup.click();
+	}
 	
 
 }
