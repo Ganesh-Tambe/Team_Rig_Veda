@@ -23,7 +23,7 @@ public class PathologyLocators {
 	@FindBy(xpath="//td[@class='text-right'][4]//child::a[@data-record-id='358'][1]")
 	public WebElement clickOnViewPayments;
 	 
-	@FindBy(xpath="//tr[@class='box box-solid total-bg']//td[5]")
+	@FindBy(xpath="//div[@id='testreport_info']")
 	public WebElement Validate;
-
+	//tr[@class='box box-solid total-bg']//td[5]
 }

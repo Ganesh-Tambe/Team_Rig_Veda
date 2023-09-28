@@ -1,5 +1,7 @@
 package com.StepDefination;
 
+import org.testng.Assert;
+
 import com.PageActions.AppointmentAction;
 import com.PageActions.LoginPageActions;
 import com.utilies.HelperClass;
@@ -11,6 +13,7 @@ import io.cucumber.java.en.When;
 public class AppointmentStepDefination {
 	AppointmentAction appointmentaction=new AppointmentAction();
 	LoginPageActions objlogin =new LoginPageActions();
+	String name1;
 	
 	@Given("users should be on {string}")
 	public void users_should_be_on(String string) {
@@ -36,10 +39,7 @@ public class AppointmentStepDefination {
 	public void click_on_date() throws Exception {
 		appointmentaction.clickOndate();
 	}
-//	@When("Select Date")
-//	public void select_date() throws Exception {
-//		appointmentaction.clickOndate();
-//	}
+
 
 	@When("Click on Specialist")
 	public void click_on_specialist() throws Exception {
@@ -70,15 +70,11 @@ public class AppointmentStepDefination {
 	public void click_on_message() throws Exception {
 		appointmentaction.clickMessage("str");
 	}
+	
 	@When("click on Available slot")
 	public void click_on_available_slot() {
 		appointmentaction.clickAvailableslot();
 	}
-
-//	@When("click on AlternateAddress")
-//	public void click_on_alternate_address() {
-//		appointmentaction.
-//	}
 
 	@Then("click on Save")
 	public void click_on_save() {
@@ -86,23 +82,25 @@ public class AppointmentStepDefination {
 	}
 	
 	@When("Click on Search")
-	public void click_on_search(String name) {
-		appointmentaction.Search(name);
+	public void click_on_search() throws InterruptedException {
+		appointmentaction.Search();
 	}
 
 	@When("Click on Show")
-	public void click_on_show() {
+	public void click_on_show() throws InterruptedException {
 		appointmentaction.clickingshow();
 	}
-
-	@Then("Validate the text")
-	public void validate_the_text() {
-		appointmentaction.ValidatingText();
+	
+	
+	@Then("Assert user is on popup box")
+	public void assert_user_is_on_popup_box() {
+		System.out.println(appointmentaction.ValidatingText());
+	   Assert.assertEquals("Appointment Details", appointmentaction.ValidatingText());
 	}
-//
-// @When("users click on Sign")
-//public void users_click_on_sign() {
-//		objlogin.clickLogin();
-//}
+//	
+//	@Then("Validate the text")
+//	public void validate_the_text() {
+//	   appointmentaction.ValidatingText();
+//	}
 
 }

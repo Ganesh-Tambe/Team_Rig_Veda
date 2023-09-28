@@ -2,10 +2,10 @@ package com.PageActions;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -15,9 +15,6 @@ import com.utilies.HelperClass;
 public class AppointmentAction {
 
 	AppointmentLocator appointmentlocator=null;
-	//Select DropdwnSortBy = new Select(objLocators.DropdwnSortBy);
-
-	//DropdwnSortBy.selectByIndex(5);
 	String str,str1;
 	
 	public AppointmentAction() {
@@ -27,20 +24,29 @@ public class AppointmentAction {
 		
 	
 		public void clickappointment() throws Exception {
-			Thread.sleep(3000);
+			
 			appointmentlocator.clickAppointment.click();
 			
 		}
 		
 		public void clickaddappointment() throws Exception {
-			Thread.sleep(3000);
+			
 			appointmentlocator.clickAddAppointment.click();
 		}
 		
 		public void clickOndate() throws Exception {
 			Thread.sleep(3000);
 			appointmentlocator.clickOnDate.click();
-			appointmentlocator.selectDate.click();
+			
+//			//Action action = new Action(HelperClass.driver);
+//			appointmentlocator.clickOnDate.sendKeys(Keys.CLEAR);
+			appointmentlocator.clickOnDate.sendKeys("09/30/2023");
+			
+//			
+//			JavascriptExecutor js = (JavascriptExecutor)HelperClass.driver;
+//			
+//			js.executeScript("document.getElementById('dates').removeAttribute('readonly');", appointmentlocator.clickOnDate);
+//			appointmentlocator.clickOnDate.sendKeys("09/30/2023"); 
 			
 		}
 		
@@ -61,7 +67,7 @@ public class AppointmentAction {
 			appointmentlocator.clickDoctor.click();
 			Select dropDown =new Select(appointmentlocator.clickDoctor);
 			dropDown.selectByIndex(3);
-			//dropDown.selectByVisibleText("Amit Singh (9009)");
+			
 		}
 		
 		public void clickshift() throws Exception {
@@ -108,16 +114,21 @@ public class AppointmentAction {
 				
 	
 		
-		public void  Search(String name1) {
+		public void  Search() throws InterruptedException {
 			appointmentlocator.Search.sendKeys("Sansa Gomez",Keys.ENTER);
+			Thread.sleep(5000);
 		}
-		public void clickingshow() {
+		public void clickingshow() throws InterruptedException {
+			Thread.sleep(5000);
 			appointmentlocator.clickshow.click();
 		}
 		
-		public void ValidatingText() {
-			return appointmentlocator.ValidateText.getText();
-		}return objlocator.Validate.getText();
+		
+		public String ValidatingText() {
+			WebElement text=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(appointmentlocator.ValidateText));
+			 return text.getText();
+			 
+		}
 		
 		
 		public void Appoint() throws Exception {	

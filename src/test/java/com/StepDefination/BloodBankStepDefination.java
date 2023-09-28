@@ -1,5 +1,8 @@
 package com.StepDefination;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import com.PageActions.BloodBankPageAction;
@@ -13,7 +16,7 @@ import io.cucumber.java.en.When;
 public class BloodBankStepDefination {
 	BloodBankPageAction objbloodbank=new BloodBankPageAction();
 	LoginPageActions objlogin =new LoginPageActions();
-
+	String win = null;
 
 	
 	@Given("blood bank User should be on {string}")
@@ -50,7 +53,14 @@ public class BloodBankStepDefination {
 	@Then("Asserting the popup box")
 	public void asserting_the_popup_box() {
 //		objbloodbank.ClickingOnPopup();
+		win = HelperClass.getDriver().getWindowHandle();
 		Assert.assertTrue(true);
+	}
+	@Then("Close the popup box")
+	public void close_the_popup_box() {
+//		HelperClass.getDriver().switchTo().window(win);
+		
+		objbloodbank.ClickingOnClose();
 	}
 	
 	

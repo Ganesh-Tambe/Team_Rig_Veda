@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class BloodBankPageLocators {
 	
+	
 	@FindBy(partialLinkText="Blood Bank")
 			public WebElement clickOnBloodBank;
 	
@@ -19,14 +20,14 @@ public class BloodBankPageLocators {
 	@FindBy(tagName="th")
 	public WebElement row;
 	
-	@FindBy(xpath="//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[13]/a[1]")
+	@FindBy(xpath="//tr[@class='odd']//child::a[@data-record-id=\"402\"][1]")
 	public WebElement showbtn;
 	
 //	@FindBy(xpath="//div[@class='modal-body min-h-3']")
 //	public WebElement popupText;
 //	
-//	@FindBy(xpath="//button[@data-id='languageSwitcher']")
-//	public WebElement close;
 	
-
+	@FindBy(css ="#viewModal .close")
+	public WebElement closePop;
+	
 }

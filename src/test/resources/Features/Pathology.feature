@@ -6,8 +6,12 @@ Background:
  Scenario: User Performs the  functionality
    When user click on Sign In
    And user clicks on Pathology
-   And user click on Search
+   And search the inputs "<SheetName>" and <Rownumber>
    And user searches the caseID;
    And Print all the search results
-   And user click on view payments
+   #And user click on view payments
    Then assert the user is on popup box
+   
+   Examples:
+   |SheetName     |Rownumber |
+   |Sheet1        |     0    |

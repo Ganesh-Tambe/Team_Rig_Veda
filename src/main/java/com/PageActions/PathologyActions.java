@@ -21,8 +21,8 @@ public class PathologyActions {
 	public void Clickpathology() {
 		objlocator.clickPathology.click();
 	}
-	public void Clicksearch() {
-		objlocator.clickSearch.sendKeys("4445");
+	public void Clicksearch(String Value) {
+		objlocator.clickSearch.sendKeys(Value);
 	}
 	public void  ClickcaseId() {
 		objlocator.clickCaseId.click();
