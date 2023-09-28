@@ -4,7 +4,7 @@ Background:
   Given user should be on "https://demo.smart-hospital.in/patient/dashboard/"
   When  user click on Sign In
   
-  @PrintData
+ @PrintData
 Scenario: Test the Ambulance Data
  And  user click on Ambulance
  And prints the All Vehicle number
