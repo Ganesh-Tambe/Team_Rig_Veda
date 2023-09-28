@@ -18,6 +18,11 @@ public class RedioLogyLocator {
 	@FindBy(tagName  = "tr")
 	public WebElement tid;
 	
+	
+	
+	
+	
+	////////////////////////////////////
 	@FindBy(xpath = "//*[@id=\"testreport\"]/tbody/tr/td[10]/a[2]")
 	public WebElement view;
 	
@@ -30,8 +35,20 @@ public class RedioLogyLocator {
 	@FindBy(xpath = "//label[text()=\"Bill No\"]")
 	public WebElement viewbillnotxt;
 	
-	@FindBy(xpath = "//*[@id=\"viewDetailReportModal\"]/div/div/div[1]/h4")
-	public WebElement billn;
+//	@FindBy(xpath = "//*[@id=\"viewDetailReportModal\"]/div/div/div[1]/h4")
+//	public WebElement billn;
+	
+	@FindBy(xpath = "//table[@id=\"testreport\"]/tbody/tr[1]/td[1]")
+	public WebElement billnotxt;
+
+	
+	@FindBy(xpath = "//button[@class=\"close\"]")
+	public WebElement closetab;
+	
+	@FindBy(xpath = "//tbody/tr/td[1][text()='RADIOB298']")
+	public WebElement bilno;
+	
+
 	
 	
 	

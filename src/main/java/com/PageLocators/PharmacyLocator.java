@@ -20,7 +20,8 @@ public class PharmacyLocator {
 	@FindBy(className  ="box-title")
 	public WebElement title;
 	
-	
+	@FindBy(xpath = "//h3[text()=\"Payment Details\"]")
+	public WebElement paydetails;
 	
 	
 }

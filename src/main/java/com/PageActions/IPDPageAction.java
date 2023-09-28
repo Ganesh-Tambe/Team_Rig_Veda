@@ -15,8 +15,7 @@ public class IPDPageAction {
 	public static String str;
 	public String popupRefrenceNo;
 	
-	public IPDPageAction()
-	{
+	public IPDPageAction(){
 		this.objIPDLocator=new IPDPageLocators();
 		PageFactory.initElements(HelperClass.getDriver(), objIPDLocator);		
 	}

@@ -34,12 +34,12 @@ public class OPDPageLocators {
 	public WebElement showbtn;
 	
 	//text from popup
-	@FindBy(xpath="//th[text()=\"OPD Checkup ID\"]")
+	@FindBy(xpath="//h4[@class=\"modal-title\" and text()=\"My Details\"]")
 	public WebElement showPopUpText;
 	
 	
 	//popup close  
-	@FindBy(xpath="//*[@id=\"viewModal\"]/div/div/div[1]/button")
+	@FindBy(css="#viewModal .close")
 	public WebElement clickShowClose;
 	
 	//Lab Investigation tab
@@ -51,5 +51,8 @@ public class OPDPageLocators {
 	
 	@FindBy(xpath="//*[@id=\"DataTables_Table_2\"]/tbody/tr[1]/td[7]/a")
 	public WebElement Lab_investshowbtn;
+	
+	@FindBy(css="#viewDetailReportModal .close")
+	public WebElement closLabPop;
 
 }
