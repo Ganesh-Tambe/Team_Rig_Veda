@@ -1,17 +1,25 @@
 package com.PageActions;
 
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
 
 import com.PageLocators.LoginPageLocators;
 import com.utilies.HelperClass;
 
 public class LoginPageActions {
 	LoginPageLocators objLogin;
-	
+   
+//	Logger log;
 	
 	public LoginPageActions() {
+//		log =LogManager.getLogger(LoginPageActions.class);
+//		log.info("--------str INFO---------");
 		this.objLogin=new LoginPageLocators();
 		PageFactory.initElements(HelperClass.getDriver(), objLogin);
 	}
