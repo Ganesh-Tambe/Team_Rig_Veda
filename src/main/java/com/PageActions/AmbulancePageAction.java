@@ -30,6 +30,7 @@ public class AmbulancePageAction {
 		objAmbulanc.ambulanceTab.click();
 	}
 
+	//Print all data
 	public void getAllData()
 
 	{
