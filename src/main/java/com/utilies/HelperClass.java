@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-
 public class HelperClass {
 	public static HelperClass objhelper;
 	
@@ -47,8 +46,8 @@ public class HelperClass {
 	   {
 		   if(driver!=null)
 		   {
-			   driver.close();
-			   driver.quit();
+			   //driver.close();
+			   //driver.quit();
 		   }
 		   
 		   objhelper=null;
