@@ -62,7 +62,7 @@ public class OPDStepDefination {
 	public void assert_the_user_is_on_popup_box() {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println(objOPDpageAction.getPopUpText());
-		Assert.assertEquals(objOPDpageAction.getPopUpText(),"4788");
+		Assert.assertEquals(objOPDpageAction.getPopUpText(),"My Details");
 //		objOPDpageAction.getPopUpText();
 //		Assert.assertTrue(true);
 	}

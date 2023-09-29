@@ -113,6 +113,7 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					<threadCount>2</threadCount>
 				</configuration>
 			</plugin>
 		</plugins>
