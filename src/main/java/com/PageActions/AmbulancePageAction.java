@@ -51,7 +51,7 @@ public class AmbulancePageAction {
 	
 	public void searchBill()
 	{
-		objAmbulanc.search.sendKeys("jhon");
+		objAmbulanc.search.sendKeys("ACB62");
 	}
 	
 	public void clickPay()
