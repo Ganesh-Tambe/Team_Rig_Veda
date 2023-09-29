@@ -15,7 +15,7 @@ Given USer Should be on "https://demo.smart-hospital.in/site/userlogin"
       | LoginCredentials   |     0     |
       
    @Negative_With_Excel
-  Scenario: login with Invalid credentials
+   Scenario: login with Invalid credentials
     When user enters "<SheetName>" and <Rownumber>
     And User clicks the Sign In button
     Then User should Not logged in successfully
