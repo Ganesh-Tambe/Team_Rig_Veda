@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.PageLocators.PathologyLocators;
 import com.utilies.HelperClass;
@@ -19,7 +20,9 @@ public class PathologyActions {
 	}
 	
 	public void Clickpathology() {
-		objlocator.clickPathology.click();
+		WebElement clkpath=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(objlocator.clickPathology));
+		clkpath.click();
+		//objlocator.clickPathology.click();
 	}
 	public void Clicksearch(String Value) {
 		objlocator.clickSearch.sendKeys(Value);

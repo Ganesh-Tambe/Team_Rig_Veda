@@ -97,10 +97,5 @@ public class AppointmentStepDefination {
 		System.out.println(appointmentaction.ValidatingText());
 	   Assert.assertEquals("Appointment Details", appointmentaction.ValidatingText());
 	}
-//	
-//	@Then("Validate the text")
-//	public void validate_the_text() {
-//	   appointmentaction.ValidatingText();
-//	}
 
 }
