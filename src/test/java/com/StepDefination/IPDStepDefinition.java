@@ -30,12 +30,32 @@ public class IPDStepDefinition {
 	public void ipd_user_click_on_ipd() {
 		objIPDPageAction.clickIPD();
 	}
-
+//////////////////////////////////////////////////////////	
+	
+	
+	
+	
+	
+/////////////////////////////////////////////////////////
 	@When("IPD USER click on Medication")
 	public void ipd_user_click_on_medication() {
 		 objIPDPageAction.clickMedication();
 	}
-
+	
+	@Then("Assert the Medication")
+	public void assert_the_medication() {
+		
+		System.out.println(objIPDPageAction.assertMedication());
+		Assert.assertEquals(objIPDPageAction.assertMedication(),"Medication");
+	}
+////////////////////////////////////////////////////////////
+	
+	
+	
+	
+	
+	
+////////////////////////////////////////////////////////////
 	@When("IPD USER click on Prescription")
 	public void ipd_user_click_on_prescription() {
 	    
@@ -52,6 +72,19 @@ public class IPDStepDefinition {
 		objIPDPageAction.showbutton();	
 	}
 	
+	@Then("Assert the user is on popup box of IPDP61")
+	public void assert_the_user_is_on_popup_box_IPDP61() {
+		
+		System.out.println(objIPDPageAction.assertionPrescription());
+		Assert.assertEquals(objIPDPageAction.assertionPrescription(),"Prescription: IPDP61");
+	}
+	///////////////////////////////////////////////////////////
+	
+
+	
+	
+	
+	//////////////////////////////////////////////////////////
 	@When("IPD USER click on Payment")
 	public void ipd_user_click_on_payment() {
 		objIPDPageAction.clickPayment();
@@ -108,6 +141,11 @@ public class IPDStepDefinition {
 		//HelperClass.driver.switchTo().frame("stripe_checkout_app");
 		objIPDPageAction.clickSummitButton();
 	}
+	////////////////////////////////////////////////////////////////////////
+	
+	
+	
+	
 
 	/////////////////////////////////////////////////////////////////////////	
 	
@@ -135,8 +173,8 @@ public class IPDStepDefinition {
 
 	@Then("IPD USER Assert the both copy text")
 	public void ipd_user_assert_the_both_copy_text() {
-	    Assert.assertTrue(true);
-		//Assert.assertEquals(objIPDPageAction.copyRefrenceNo(), objIPDPageAction.copyPopupRefrenceNo(popupRefrenceNo));
+		
+		Assert.assertEquals(objIPDPageAction.assertCopyRefrenceNo(),"Reference No : OTREF38");
 	}
 
 }
