@@ -5,12 +5,11 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.PageLocators.BloodBankPageLocators;
-import com.PageLocators.LoginPageLocators;
 import com.utilies.HelperClass;
 
 public class BloodBankPageAction {
@@ -28,11 +27,7 @@ public class BloodBankPageAction {
 	public void ClickingSearch() {
 		bloodbanklocators.clickOnSearch.sendKeys("B+",Keys.ENTER);
 	}
-	
-//	public void ClickingOnIssueDate() {
-//		
-//	}
-//	
+
 	public void getAllData()
 	{
 	   // Now get all the TR elements from the table
@@ -47,19 +42,14 @@ public class BloodBankPageAction {
 	        System.out.println("content >>   " + cell.getText());
 	    }
 	  }
+	 
 	}
 	public void ClickingOnShowbtn() {
+		// vis=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(null)));
 		bloodbanklocators.showbtn.click();
 	}
 	
-//	public void ClickingOnPopup() {
-//		bloodbanklocators.popupText.click();
-//	}
 	public void ClickingOnClose() {
-//		Actions ac = new Actions(HelperClass.getDriver());
-//		WebElement cl = bloodbanklocators.closePop;
-//		ac.moveToElement(cl);
-//		ac.click(cl);
 		WebElement cls=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bloodbanklocators.closePop));
 		cls.click();
 	}

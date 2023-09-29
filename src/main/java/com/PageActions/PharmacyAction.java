@@ -7,7 +7,11 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.http.util.Asserts;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.PageLocators.PharmacyLocator;
 import com.aventstack.extentreports.util.Assert;
@@ -46,10 +50,10 @@ public class PharmacyAction {
 			return phlocator.paydetails.getText();
 		}
 
-		///-------------------------///
+		
 		///----properties file -----///
 		
-		public void register() {
+		public void search_bill() {
 			
 			File file = new File("C:\\Users\\kshirsat\\eclipse-workspace\\piletProject\\Team_Rig_Veda\\src\\test\\resources\\PharmacyData.properties");
 			
@@ -75,10 +79,29 @@ public class PharmacyAction {
 			}
 			
 			bill_number=prop.getProperty("bill_no");
-			System.out.println("this is billno "+bill_number);
-			
+						
 			this.search(bill_number);
 
 		}
 
+		public void search_caseid(String caseid ){
+			phlocator.search_caseid.sendKeys(caseid);
+		}
+		
+		//---------------------------------- second scenario---------------------------------
+		
+		public void clickview() {
+			phlocator.pharmacypay.click();
+		}
+		
+		public void clickadd() {
+			phlocator.pharmacyadd.click();
+		}
+		
+		public String  pharmacy_assertion_txt() {
+			WebElement url = HelperClass.wait.until(ExpectedConditions.elementToBeClickable(phlocator.payment_details));
+//			String Currunt_url=HelperClass.getDriver().getCurrentUrl();
+//			String expected_url="https://demo.smart-hospital.in/patient/payment/stripe";
+			return url.getText();
+		}
 }

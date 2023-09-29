@@ -32,12 +32,6 @@ public class PathologyStepDefination {
  
 	}
 
-//
-//	@When("user click on Search")
-//	public void user_click_on_search() {
-//		objaction.Clicksearch();
-//	}
-
 	@When("user searches the caseID;")
 	public void user_searches_the_case_id() {
 		objaction.ClickcaseId();
@@ -47,11 +41,6 @@ public class PathologyStepDefination {
 	public void print_all_the_search_results() {
 		objaction.getAllData();
 	}
-
-//	@When("user click on view payments")
-//	public void user_click_on_view_payments() {
-//		objaction.ClickViewPayments();
-//	}
 
 	@Then("assert the user is on popup box")
 	public void assert_the_user_is_on_popup_box() {
