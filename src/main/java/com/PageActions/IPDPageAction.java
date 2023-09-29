@@ -4,11 +4,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.PageLocators.IPDPageLocators;
 import com.utilies.HelperClass;
 
-import io.cucumber.java.en.Then;
+import freemarker.core.ReturnInstruction.Return;
 
 public class IPDPageAction {
 	IPDPageLocators objIPDLocator;
@@ -25,9 +26,19 @@ public class IPDPageAction {
 	}
 	
 	public void clickMedication(){
-		objIPDLocator.clickVisit.click();
+		objIPDLocator.clickMedication.click();
+		
 	}
 	
+	public String assertMedication(){
+		
+		WebElement MedicationAssertion = HelperClass.wait.until(ExpectedConditions.elementToBeClickable(objIPDLocator.AssertMEdication));
+		return MedicationAssertion.getText();
+		
+	}
+	
+	
+	///////////////////////////////////////////////////////////////
 	public void clickprescription(){
 		objIPDLocator.clickprescription.click();
 	
@@ -40,6 +51,17 @@ public class IPDPageAction {
 	public void showbutton(){
 		objIPDLocator.showbutton.click();
 	}
+	
+	public String assertionPrescription(){
+		
+		WebElement assertionPrescription = HelperClass.wait.until(ExpectedConditions.visibilityOf(objIPDLocator.assertionPrescription));
+		return assertionPrescription.getText();
+		
+	}
+	
+	
+	
+	///////////////////////////////////////
 	public void clickPayment(){
 		objIPDLocator.clickPayment.click();
 	}
@@ -93,7 +115,9 @@ public class IPDPageAction {
 		System.out.println(popupRefrenceNo);
 	}
 	
-	public void assertCopyRefrenceNo(){
+	public String assertCopyRefrenceNo(){
+		WebElement assertionPrescription = HelperClass.wait.until(ExpectedConditions.visibilityOf(objIPDLocator.copyPopupRefrenceNo));
+		return assertionPrescription.getText();
 		
 	}
 
