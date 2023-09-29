@@ -43,9 +43,10 @@ public class BloodBankPageAction {
 	    }
 	 
 	}
+	}
 	public void ClickingOnShowbtn() {
-		WebElement vis=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(null)))
-		bloodbanklocators.showbtn.click();
+		WebElement vis=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(bloodbanklocators.showbtn));
+		vis.click();
 	}
 	
 	public void ClickingOnClose() {
