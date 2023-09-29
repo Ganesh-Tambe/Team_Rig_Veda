@@ -14,9 +14,7 @@ public class BloodBankPageLocators {
 	
 	@FindBy(xpath="//table[@id='DataTables_Table_0']")
 	public WebElement table;
-	
-	//@FindBy(xpath="")
-	
+
 	@FindBy(tagName="th")
 	public WebElement row;
 	
@@ -26,8 +24,8 @@ public class BloodBankPageLocators {
 //	@FindBy(xpath="//div[@class='modal-body min-h-3']")
 //	public WebElement popupText;
 //	
-	
-	@FindBy(css ="#viewModal .close")
+	@FindBy(xpath="//div[@id=\"viewModal\"]//div[@class=\"modal-header modal-media-header\"]//button")
+	//@FindBy(css ="#viewModal .close")
 	public WebElement closePop;
 	
 }

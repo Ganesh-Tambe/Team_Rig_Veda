@@ -25,5 +25,5 @@ public class PathologyLocators {
 	 
 	@FindBy(xpath="//div[@id='testreport_info']")
 	public WebElement Validate;
-	//tr[@class='box box-solid total-bg']//td[5]
+
 }

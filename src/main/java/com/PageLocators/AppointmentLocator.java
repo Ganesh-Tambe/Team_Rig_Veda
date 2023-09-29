@@ -52,7 +52,8 @@ public class AppointmentLocator {
 		public WebElement clickshow;
 		
 		
-		@FindBy(css=".modal-title:nth-child(3)")
+	//	@FindBy(css=".modal-title:nth-child(3)")
+		@FindBy(xpath="//h4[text()='Appointment Details']")
 		public WebElement ValidateText;
 		
 }
