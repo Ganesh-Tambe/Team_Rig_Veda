@@ -15,7 +15,6 @@ import io.cucumber.java.en.When;
 
 public class PharmacySteps {
 
-	
 	PharmacyAction objpharmacy=new PharmacyAction();
 	LoginPageActions objlogin=new LoginPageActions();
 	
@@ -40,7 +39,7 @@ public void visitor_click_on_pharmacy() {
 @And("visitor search The bill no")
 public void visitor_search_the_bill_no() {
     // Write code here that turns the phrase above into concrete actions
-   objpharmacy.register();
+   objpharmacy.search_bill();
 }
 
 @And("visitor click on pay")
@@ -58,15 +57,35 @@ public void visitor_click_on_add() {
 
 @Then("assertion for checking webpage")
 public void assertion_for_checking_webpage() {
-	//WebElement element = driver.findElement(By.className("box-title"));
-    // Get the text from the element
-    //String elementText = element.getText();
+	
 	String expected = "Payment Details";
 	String actual =objpharmacy.asserttext();	
 	System.out.println(actual+" this is actuaal");
 	Assert.assertEquals(expected, actual,"this is correct payment ");
 }
 
+//------------------------------- second  scenario ------------------------------
+
+@Given("search for bill {string}")
+public void print_the_name_and(String string) {
+   objpharmacy.search_caseid(string);
+}
+
+@And("visiotor click on bill pay")
+public void visiotor_click_on_bill_pay() {
+    objpharmacy.clickPay();
+}
+@And("visitor should click on add")
+public void visitor_should_click_on_add() throws InterruptedException {
+    objpharmacy.clickadd();  
+}
+@And("perform assertion")
+public void perform_assertion() {
+    
+    String actualtext="Payment Details";
+    Assert.assertEquals(objpharmacy.pharmacy_assertion_txt(),actualtext," Assirtion Succefull");
+   
+}
 
 
 }
