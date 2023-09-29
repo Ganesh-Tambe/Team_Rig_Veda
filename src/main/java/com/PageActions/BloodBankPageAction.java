@@ -41,10 +41,11 @@ public class BloodBankPageAction {
 	    {
 	        System.out.println("content >>   " + cell.getText());
 	    }
+	  }
 	 
 	}
 	public void ClickingOnShowbtn() {
-		WebElement vis=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(null)))
+		// vis=HelperClass.wait.until(ExpectedConditions.elementToBeClickable(null)));
 		bloodbanklocators.showbtn.click();
 	}
 	
