@@ -9,7 +9,7 @@ import com.utilies.HelperClass;
 
 public class RedioLogyLocator {
 
-	@FindBy(xpath = "//span[text()=\" Radiology\"]")
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[7]/a/span")
 	public WebElement rediotable;
 	
 	@FindBy(tagName = "table")
@@ -49,7 +49,16 @@ public class RedioLogyLocator {
 	public WebElement bilno;
 	
 
+	//------------------ locators for third scenario ---------------------
+	//*[@id="testreport_filter"]/label/input
 	
+	@FindBy(xpath = "//*[@id=\"testreport_filter\"]/label/input")
+	public WebElement searchbillno;
 	
+	@FindBy(xpath = "//*[@id=\"testreport\"]/tbody/tr/td[10]/a[1]/i")
+	public WebElement view_details_click;
+	
+	@FindBy(xpath = "//h4[text()=\"Payments\"]")
+	public WebElement assert_PayTxt;
 	
 }

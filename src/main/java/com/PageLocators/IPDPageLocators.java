@@ -15,10 +15,15 @@ public class IPDPageLocators {
 	public WebElement clickIPD;
 	
 	@FindBy(xpath = "//*[@id=\"tabs\"]/div[1]/div[2]/div/ul/li[2]/a")
-	public WebElement clickVisit;
+	public WebElement clickMedication;
 	
-
+	@FindBy(xpath = "//*[@id=\"tabs\"]/div[1]/div[2]/div/ul/li[2]/a")
+	public WebElement AssertMEdication;
 	
+	
+	
+	
+	///////////////////////////////
 	@FindBy(xpath ="//*[@id=\"tabs\"]/div[1]/div[2]/div/ul/li[3]/a")
 	public WebElement clickprescription;
 	
@@ -28,10 +33,17 @@ public class IPDPageLocators {
 	@FindBy(xpath = "//*[@id=\"DataTables_Table_3\"]/tbody/tr/td[4]/a")
 	public WebElement showbutton;
 	
+	@FindBy(xpath = "//*[@id=\"html-2-pdfwrapper\"]/div/div/div[2]/table[1]/tbody/tr/th[1]")
+	public WebElement assertionPrescription;
+
+	
+	
+	
+	
+	//////////////////////////////////////////////////////////////
 	@FindBy(xpath="//*[@id=\"tabs\"]/div[1]/div[2]/div/ul/li[8]/a")
 	public WebElement clickPayment;
 	
-
 	@FindBy(xpath="//*[@id=\"payment\"]/div[1]/div/button")
 	public WebElement clickMakePayment;
 	
@@ -72,11 +84,11 @@ public class IPDPageLocators {
 	@FindBy(xpath="//*[@id=\"operationtheatre\"]/div[3]/table/tbody/tr[1]/td[6]/a")
 	public WebElement clickShowRefrenceNo;
 	
-	@FindBy(xpath="//*[@id=\"show_ot_data\"]/div[1]/div[1]/p/strong")
+	@FindBy(xpath="//*[@id=\"show_ot_data\"]/div[1]/div[1]/p")
 	public WebElement copyPopupRefrenceNo ;
 	
-//	@FindBy(xpath="/html/body/div[1]/div[1]/section[2]/div/div/h4")
-//	public WebElement :
+	@FindBy(xpath="//*[@id=\"show_ot_data\"]/div[1]/div[1]")
+	public WebElement assertCopyRefrenceNo;
 	
 	
 }
