@@ -8,6 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 
 public class RunnerClass {
 	@CucumberOptions(
+			features = "src\\test\\resources\\Features\\Ambulance.feature",
+			tags = "",
 
 			glue = "com.StepDefination",
 		    plugin={"usage","junit:target/cucumber.reports/cucumber.xml"})
